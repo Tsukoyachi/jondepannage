@@ -17,7 +17,7 @@ spec:
                         service:
                             name: jondepannage
                             port:
-                                number: 3000
+                                number: 80
     tls:
         - hosts:
               - jondepannage.tsukoyachi.ovh
