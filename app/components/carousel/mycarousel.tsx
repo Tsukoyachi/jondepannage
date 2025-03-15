@@ -1,5 +1,6 @@
 import Autoplay from 'embla-carousel-autoplay';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
+import Image from 'next/image';
 
 export default function MyCarousel() {
     const isLoading = false;
@@ -20,7 +21,7 @@ export default function MyCarousel() {
                 <CarouselContent>
                     {Array.from({ length: 6 }).map((_, index) => (
                         <CarouselItem key={index}>
-                            <img
+                            <Image
                                 src={`/images/carousel/image-${index}.jpg`}
                                 alt={`carousel-image-${index}`}
                                 className="md:basis-1/2 lg:basis-1/3 rounded-md"

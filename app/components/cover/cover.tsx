@@ -15,7 +15,9 @@ export default function Cover() {
                     <h1 className="md:text-5xl text-lg drop-shadow-2xl font-bold md:pb-5">
                         Dépannage - Remorquage - Transport
                     </h1>
-                    <h2 className="hidden md:block text-3xl md:pb-5">Besoin d'un dépannage ?</h2>
+                    <h2 className="hidden md:block text-3xl md:pb-5">
+                        Besoin d&lsquo;un dépannage ?
+                    </h2>
                     <p className="hidden md:block text-3xl">
                         Vous pouvez nous contacter 24h/24 7j/7
                     </p>

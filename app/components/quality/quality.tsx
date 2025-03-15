@@ -15,7 +15,7 @@ export default function Quality() {
                 </li>
                 <li className="flex items-center">
                     <MapPinned />
-                    <p className="ml-2">Disponible dans toute la côte d'azur</p>
+                    <p className="ml-2">Disponible dans toute la côte d&lsquo;azur</p>
                 </li>
             </ul>
 
@@ -30,7 +30,7 @@ export default function Quality() {
                 </div>
                 <div className="flex">
                     <MapPinned />
-                    <p className="ml-2">Disponible dans toute la côte d'azur</p>
+                    <p className="ml-2">Disponible dans toute la côte d&lsquo;azur</p>
                 </div>
             </div>
 
