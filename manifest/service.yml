@@ -4,7 +4,6 @@ metadata:
     labels:
         io.kompose.service: jondepannage
     name: jondepannage
-    namespace: jondepannage
 spec:
     ports:
         - name: '3000'
