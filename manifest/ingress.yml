@@ -5,8 +5,12 @@ metadata:
     namespace: jondepannage
     annotations:
         cert-manager.io/cluster-issuer: cloudflare-dns
-        traefik.ingress.kubernetes.io/router.middlewares: default-redirect-https@kubernetescrd
+        traefik.ingress.kubernetes.io/router.middlewares: default-https-redirect@kubernetescrd
 spec:
+    tls:
+        - hosts:
+              - jondepannage.tsukoyachi.ovh
+          secretName: jondepannage-tls
     rules:
         - host: jondepannage.tsukoyachi.ovh
           http:
@@ -18,7 +22,3 @@ spec:
                             name: jondepannage
                             port:
                                 number: 80
-    tls:
-        - hosts:
-              - jondepannage.tsukoyachi.ovh
-          secretName: jondepannage.tsukoyachi-tls
