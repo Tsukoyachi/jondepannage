@@ -15,8 +15,6 @@ spec:
             labels:
                 io.kompose.service: jondepannage
         spec:
-            imagePullSecrets:
-                - name: ghcr-secret
             containers:
                 - image: ghcr.io/tsukoyachi/jondepannage:a2a33f04
                   name: jondepannage
