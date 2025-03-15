@@ -5,7 +5,7 @@ on:
         branches:
             - master
 
-permissions: write:packages
+permissions: write-all
 
 jobs:
     main:
