@@ -6,5 +6,6 @@ resources:
     - deployment.yml
     - ingress.yml
     - service.yml
+    - ghcr-sealed-secret.yaml
 
 namespace: jondepannage
