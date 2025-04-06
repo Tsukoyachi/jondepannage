@@ -21,11 +21,14 @@ export default function MyCarousel() {
                 <CarouselContent>
                     {Array.from({ length: 6 }).map((_, index) => (
                         <CarouselItem key={index}>
-                            <Image
-                                src={`/images/carousel/image-${index}.jpg`}
-                                alt={`carousel-image-${index}`}
-                                className="md:basis-1/2 lg:basis-1/3 rounded-md"
-                            />
+                            <div className="relative w-full h-64 md:h-80 lg:h-96">
+                                <Image
+                                    src={`/images/carousel/image-${index}.jpg`}
+                                    alt={`carousel-image-${index}`}
+                                    className="object-cover rounded-md"
+                                    fill // Fills the container while maintaining aspect ratio
+                                />
+                            </div>
                         </CarouselItem>
                     ))}
                 </CarouselContent>
