@@ -2,7 +2,11 @@ import Autoplay from 'embla-carousel-autoplay';
 import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import Image from 'next/image';
 
-export default function MyCarousel() {
+type MyCarouselProps = {
+    isFrenchSelected: boolean;
+};
+
+export default function MyCarousel(props: MyCarouselProps) {
     const isLoading = false;
 
     return (
@@ -33,7 +37,11 @@ export default function MyCarousel() {
                     ))}
                 </CarouselContent>
             </Carousel>
-            <p className="text-center xxs:text-xl font-light">Notre expertise à votre service</p>
+            <p className="text-center xxs:text-xl font-light">
+                {props.isFrenchSelected
+                    ? 'Notre expertise à votre service'
+                    : 'Our expertise at your service'}
+            </p>
         </div>
     );
 }
