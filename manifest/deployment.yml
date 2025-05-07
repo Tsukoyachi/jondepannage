@@ -16,7 +16,7 @@ spec:
                 io.kompose.service: jondepannage
         spec:
             containers:
-                - image: ghcr.io/tsukoyachi/jondepannage:1de253f7b7545fe331f8674f2df45a01c3150c90
+                - image: ghcr.io/tsukoyachi/jondepannage:9c4ef17801018ae62454e9c0195aea20a0943602
                   name: jondepannage
                   ports:
                       - containerPort: 3000
