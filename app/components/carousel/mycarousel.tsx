@@ -27,7 +27,7 @@ export default function MyCarousel(props: MyCarouselProps) {
                         <CarouselItem key={index}>
                             <div className="relative w-full h-64 md:h-80 lg:h-96">
                                 <Image
-                                    src={`/images/carousel/image-${index}.jpg`}
+                                    src={`/images/carousel/image-${index}.webp`}
                                     alt={`carousel-image-${index}`}
                                     className="object-cover rounded-md"
                                     fill // Fills the container while maintaining aspect ratio
