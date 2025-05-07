@@ -24,7 +24,7 @@ export default function Navbar(props: NavbarProps) {
                     onClick={props.selectFrench}
                 >
                     <Image
-                        src="/images/french-flag.jpg"
+                        src="/images/french-flag.webp"
                         alt="french"
                         width={40} // Fixed width (4rem)
                         height={40} // Fixed height (4rem)
@@ -37,7 +37,7 @@ export default function Navbar(props: NavbarProps) {
                     onClick={props.selectEnglish}
                 >
                     <Image
-                        src="/images/english-flag.jpg"
+                        src="/images/english-flag.webp"
                         alt="english"
                         width={40} // Fixed width (4rem)
                         height={40} // Fixed height (4rem)
