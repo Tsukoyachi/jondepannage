@@ -9,7 +9,7 @@ export default function Cover(props: CoverProps) {
         <div className="relative  flex flex-col items-center">
             <img
                 className="md:w-full md:h-screen md:object-cover filter brightness-[0.7] z-[-1]"
-                src="/images/cover-truck.jpg"
+                src="/images/cover-truck.webp"
                 alt='Background image with a truck'
             />
 
