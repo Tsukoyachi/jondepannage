@@ -10,9 +10,20 @@ spec:
     tls:
         - hosts:
               - jondepannage.tsukoyachi.ovh
+              - www.jondepannage.tsukoyachi.ovh
           secretName: jondepannage-tls
     rules:
         - host: jondepannage.tsukoyachi.ovh
+          http:
+              paths:
+                  - path: /
+                    pathType: Prefix
+                    backend:
+                        service:
+                            name: jondepannage
+                            port:
+                                number: 80
+        - host: www.jondepannage.tsukoyachi.ovh
           http:
               paths:
                   - path: /
