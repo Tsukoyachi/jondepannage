@@ -12,23 +12,29 @@ export default function Page() {
     const [isFrenchSelected, setIsFrenchSelected] = useState(true);
 
     return (
-        <>
-            <Navbar
-                isFrenchSelected={isFrenchSelected}
-                selectFrench={() => {
-                    setIsFrenchSelected(true); // Update state to French
-                    console.log(isFrenchSelected);
-                }}
-                selectEnglish={() => {
-                    setIsFrenchSelected(false); // Update state to English
-                    console.log(isFrenchSelected);
-                }}
-            />
-            <Cover isFrenchSelected={isFrenchSelected} />
-            <SubCover isFrenchSelected={isFrenchSelected} />
-            <Quality isFrenchSelected={isFrenchSelected} />
-            <MyCarousel isFrenchSelected={isFrenchSelected} />
+        <div className="min-h-screen flex flex-col">
+            <div>
+                <Navbar
+                    isFrenchSelected={isFrenchSelected}
+                    selectFrench={() => {
+                        setIsFrenchSelected(true); // Update state to French
+                        console.log(isFrenchSelected);
+                    }}
+                    selectEnglish={() => {
+                        setIsFrenchSelected(false); // Update state to English
+                        console.log(isFrenchSelected);
+                    }}
+                />
+                <Cover isFrenchSelected={isFrenchSelected} />
+                <SubCover isFrenchSelected={isFrenchSelected} />
+                <Quality isFrenchSelected={isFrenchSelected} />
+            </div>
+            <div className="flex-grow flex items-center justify-center">
+                <div className="w-full">
+                    <MyCarousel isFrenchSelected={isFrenchSelected} />
+                </div>
+            </div>
             <ContactData />
-        </>
+        </div>
     );
 }
