@@ -33,8 +33,8 @@ export default function Quality(props: QualityProps) {
                 </li>
             </ul>
 
-            <div className="hidden md:flex space-x-64 justify-center pt-3 pb-3">
-                <div className="flex">
+            <div className="hidden md:flex space-x-8 lg:space-x-16 xl:space-x-32 2xl:space-x-64 justify-center pt-3 pb-3">
+                <div className="flex items-center">
                     <Clock />
                     <p className="ml-2">
                         {props.isFrenchSelected
@@ -42,13 +42,13 @@ export default function Quality(props: QualityProps) {
                             : 'Day and night intervention'}
                     </p>
                 </div>
-                <div className="flex">
+                <div className="flex items-center">
                     <User />
                     <p className="ml-2">
                         {props.isFrenchSelected ? 'Dépanneur qualifié' : 'Qualified mechanic'}
                     </p>
                 </div>
-                <div className="flex">
+                <div className="flex items-center">
                     <MapPinned />
                     <p className="ml-2">
                         {props.isFrenchSelected
