@@ -20,7 +20,7 @@ export default function MyCarousel(props: MyCarouselProps) {
                 opts={{
                     loop: true,
                 }}
-                className="w-full md:w-2/5 md:mx-auto pl-4 pr-4 md:pl-0 md:pr-0"
+                className="w-full pl-4 pr-4 lg:w-2/5 lg:mx-auto lg:pl-0 lg:pr-0"
             >
                 <CarouselContent>
                     {Array.from({ length: 6 }).map((_, index) => (
