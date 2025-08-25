@@ -38,13 +38,14 @@ This project is built with modern web technologies:
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Carousel**: [Embla Carousel](https://www.embla-carousel.com/)
 - **Language**: TypeScript for type safety
-- **Package Manager**: Bun for fast dependency management
+- **Package Manager**: npm for dependency management
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 
-- Node.js 18+ or Bun
+- Node.js 22+ (tested with v22.9.0)
+- npm
 - Git
 
 ### Installation
@@ -57,19 +58,11 @@ This project is built with modern web technologies:
 
 2. **Install dependencies**
    ```bash
-   # Using Bun (recommended)
-   bun install
-
-   # Or using npm
    npm install
    ```
 
 3. **Run the development server**
    ```bash
-   # Using Bun
-   bun dev
-
-   # Or using npm
    npm run dev
    ```
 
@@ -81,16 +74,15 @@ This project is built with modern web technologies:
 
 ```bash
 # Development
-bun dev          # Start development server
-npm run dev      # Alternative with npm
+npm run dev      # Start development server
 
 # Production
-bun run build    # Build for production
-bun start        # Start production server
+npm run build    # Build for production
+npm start        # Start production server
 
 # Code Quality
-bun run lint     # Run ESLint
-bun run format   # Format code with Prettier
+npm run lint     # Run ESLint
+npm run format   # Format code with Prettier
 ```
 
 ## 🐳 Docker Deployment
@@ -149,6 +141,25 @@ The site includes PWA features:
 
 ## 🚀 Deployment
 
+### GitHub Actions + Vercel (Automated)
+
+The project includes a GitHub Actions workflow for automatic deployment to Vercel:
+
+1. **Setup Secrets** in your GitHub repository:
+   - `VERCEL_TOKEN`: Your Vercel authentication token
+   - `VERCEL_ORG_ID`: Your Vercel organization ID
+   - `VERCEL_PROJECT_ID`: Your Vercel project ID
+
+2. **Automatic Deployment**: Every push to the `master` branch triggers deployment
+
+The workflow handles npm setup and builds the project automatically.
+
+### Manual Vercel Deployment
+
+1. Connect your GitHub repository to Vercel
+2. Configure build settings (auto-detected for Next.js)
+3. Deploy automatically on every push
+
 ### Kubernetes
 
 Kubernetes manifests are included in the `manifest/` directory:
@@ -156,12 +167,6 @@ Kubernetes manifests are included in the `manifest/` directory:
 ```bash
 kubectl apply -k manifest/
 ```
-
-### Vercel (Recommended)
-
-1. Connect your GitHub repository to Vercel
-2. Configure build settings (auto-detected for Next.js)
-3. Deploy automatically on every push
 
 ## 🤝 Contributing
 
